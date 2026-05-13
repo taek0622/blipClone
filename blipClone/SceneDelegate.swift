@@ -20,26 +20,29 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         tabbar.setViewControllers([TodayViewController(), ArtistViewController(), ViewController(), FanLogViewController(), TimeLineViewController()], animated: true)
 
         if let items = tabbar.tabBar.items {
-            items[0].selectedImage = UIImage(systemName: "heart.fill")
-            items[0].image = UIImage(systemName: "heart")
+            items[0].selectedImage = UIImage(systemName: "house.fill")
+            items[0].image = UIImage(systemName: "house")
             items[0].title = "투데이"
 
-            items[1].selectedImage = UIImage(systemName: "heart.fill")
-            items[1].image = UIImage(systemName: "heart")
+            items[1].selectedImage = UIImage(systemName: "star.fill")
+            items[1].image = UIImage(systemName: "star")
             items[1].title = "아티스트"
 
-            items[2].selectedImage = UIImage(systemName: "heart.fill")
-            items[2].image = UIImage(systemName: "heart")
+            items[2].selectedImage = UIImage(systemName: "plus.app.fill")
+            items[2].image = UIImage(systemName: "plus.app")
             items[2].title = "작성"
 
-            items[3].selectedImage = UIImage(systemName: "heart.fill")
-            items[3].image = UIImage(systemName: "heart")
+            items[3].selectedImage = UIImage(systemName: "text.book.closed.fill")
+            items[3].image = UIImage(systemName: "text.book.closed")
             items[3].title = "팬로그"
 
-            items[4].selectedImage = UIImage(systemName: "heart.fill")
-            items[4].image = UIImage(systemName: "heart")
+            items[4].selectedImage = UIImage(systemName: "rectangle.grid.1x2.fill")
+            items[4].image = UIImage(systemName: "rectangle.grid.1x2")
             items[4].title = "타임라인"
         }
+
+        tabbar.tabBar.tintColor = .magenta
+        tabbar.tabBar.unselectedItemTintColor = .black
 
         window?.rootViewController = tabbar
         window?.makeKeyAndVisible()

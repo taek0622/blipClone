@@ -9,22 +9,25 @@ import UIKit
 
 class TodayViewController: UIViewController {
 
+    // MARK: - View
+
+    private let todayScheduleTitle: UILabel = {
+        $0.text = "오늘의 스케줄을\n놓치지 마세요 ⏰"
+        $0.textAlignment = .left
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        return $0
+    }(UILabel())
+
+    // MARK: - Life Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .yellow
-
-        // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
+    // MARK: - Method
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func layout() {
+        
     }
-    */
-
 }
